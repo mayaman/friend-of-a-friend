@@ -109,7 +109,7 @@ export default {
       // Remove current window
       this.openWindows.splice(index, 1);
     },
-    openNextCollection(index) {
+    openNextCollection() {
       // this.openWindows.splice(index, 1);
       this.currentWindowIndex++;
 
