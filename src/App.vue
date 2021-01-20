@@ -42,7 +42,7 @@ export default {
           type: "continue",
           left: 80,
           top: 65,
-          size: 5,
+          size: 8,
         },
         {
           type: "text",
@@ -103,17 +103,9 @@ export default {
       return tempWindowCollections;
     },
   },
-  mounted() {
-    console.log("hello world");
-  },
+  mounted() {},
   methods: {
-    setLeft(index) {
-      console.log("trying to close window: ", index);
-      // Remove current window
-      // this.openWindows[index].left = ;
-    },
     closeWindow(index) {
-      console.log("trying to close window: ", index);
       // Remove current window
       this.openWindows.splice(index, 1);
     },

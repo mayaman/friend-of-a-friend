@@ -132,17 +132,17 @@ export default {
 }
 
 .window-contents .continue button {
-  background: #ffb1b9;
+  background: none;
   border: none;
   padding: 5px;
   border-radius: 5px;
   font-family: "Courier New", monospace;
   font-weight: bold;
   font-size: 24px;
+  outline-color: #ffb1b9;
 }
 
 .window-contents .continue button:hover {
-  background: #6aaae4;
   cursor: url("~@/assets/pointer.png"), auto;
 }
 </style>
