@@ -112,6 +112,13 @@ export default {
     openNextCollection() {
       // this.openWindows.splice(index, 1);
       this.currentWindowIndex++;
+      this.openWindows = [];
+      this.openWindows.push({
+        type: "continue",
+        left: 80,
+        top: 65,
+        size: 8,
+      });
 
       this.windowCollections[this.currentWindowIndex].forEach((window) => {
         this.openWindows.push(window);
@@ -189,17 +196,17 @@ body {
   display: inline;
   height: 100%;
   width: auto;
-  /* will-change: transform;
-  animation: marquee 15s linear infinite; */
+  will-change: transform;
+  /* animation: marquee 30s linear infinite; */
 }
 
 @-webkit-keyframes marquee {
   0% {
-    transform: translate(-30%, 0);
+    transform: translate(200%, 0);
   }
 
   100% {
-    transform: translate(-70%, 0);
+    transform: translate(0%, 0);
   }
 }
 </style>
