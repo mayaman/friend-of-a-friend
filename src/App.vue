@@ -14,19 +14,16 @@
       v-bind:key="window.imgPath"
       v-bind:index="index"
       v-on:closeWindow="closeWindow"
+      v-on:nextCollection="openNextCollection"
+      v-on:setLeft="setLeft"
     ></Window>
-    <!-- <div class="marquee">
+    <div class="marquee">
       <img
         draggable="false"
         alt="Pixelated text that says Friend of a Friend"
         src="./assets/foaf.png"
       />
-      <img
-        draggable="false"
-        alt="Pixelated text that says Friend of a Friend"
-        src="./assets/foaf.png"
-      />
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -40,24 +37,28 @@ export default {
   },
   data() {
     return {
-      allWindows: [
+      openWindows: [
+        {
+          type: "continue",
+          left: 80,
+          top: 65,
+          size: 5,
+        },
         {
           type: "text",
           text:
             "For our next collection, we wanted to go back in time and re-explore the World Wide Web as we first dreamt it...",
+          left: 50,
+          top: 50,
+          size: 10,
         },
-        { type: "image", imgPath: "1991_large_bw.png" },
-        { type: "image", imgPath: "matisse.jpg" },
-        { type: "image", imgPath: "connection_large_color.png" },
-        { type: "image", imgPath: "connection_small_color.png" },
-        { type: "image", imgPath: "wavywifi.png" },
-        { type: "image", imgPath: "photo_computer.png" },
-        { type: "image", imgPath: "soundwave.png" },
-        { type: "image", imgPath: "foaf_circle_large.png" },
-        { type: "image", imgPath: "internet.gif" },
-        { type: "image", imgPath: "photo_selfie.png" },
       ],
-      windowCollections: [
+      currentWindowIndex: 0,
+    };
+  },
+  computed: {
+    windowCollections: () => {
+      let tempWindowCollections = [
         [
           {
             type: "text",
@@ -89,39 +90,44 @@ export default {
             text: "Both of us were born in 1991.",
           },
         ],
-      ],
-      openWindows: [
-        {
-          type: "text",
-          text:
-            "For our next collection, we wanted to go back in time and re-explore the World Wide Web as we first dreamt it...",
-        },
-      ],
-      currentWindowIndex: 0,
-    };
+      ];
+
+      tempWindowCollections.forEach((collection) => {
+        collection.forEach((window) => {
+          window.left = Math.ceil(Math.random() * 80);
+          window.top = Math.ceil(Math.random() * 80);
+          window.size = Math.ceil(Math.random() * 10) + 10;
+        });
+      });
+
+      return tempWindowCollections;
+    },
   },
   mounted() {
     console.log("hello world");
   },
   methods: {
+    setLeft(index) {
+      console.log("trying to close window: ", index);
+      // Remove current window
+      // this.openWindows[index].left = ;
+    },
     closeWindow(index) {
       console.log("trying to close window: ", index);
       // Remove current window
       this.openWindows.splice(index, 1);
-
-      this.currentWindowIndex =
-        (this.currentWindowIndex + 1) % this.allWindows.length;
+    },
+    openNextCollection(index) {
+      // this.openWindows.splice(index, 1);
+      this.currentWindowIndex++;
 
       this.windowCollections[this.currentWindowIndex].forEach((window) => {
-        console.log("adding window: ");
-        console.log(window);
         this.openWindows.push(window);
       });
 
-      // this.openWindows.push(this.allWindows[this.currentWindowIndex]);
-      // this.currentWindowIndex =
-      //   (this.currentWindowIndex + 1) % this.allWindows.length;
-      // this.openWindows.push(this.allWindows[this.currentWindowIndex]);
+      // this.openWindows.push({
+      //   type: "continue",
+      // });
     },
   },
 };
@@ -182,8 +188,8 @@ body {
   width: 100%;
   display: inline-flex;
   position: absolute;
-  left: 0;
-  bottom: 0;
+  left: 10px;
+  top: 0;
   height: 5vh;
 }
 

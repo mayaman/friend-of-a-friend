@@ -2,9 +2,13 @@
   <transition name="fade">
     <div
       class="draggable window-container"
-      v-bind:style="{ left: left + '%', top: top + '%', maxWidth: size + 'vw' }"
+      v-bind:style="{
+        left: window.left + '%',
+        top: window.top + '%',
+        maxWidth: window.size + 'vw',
+      }"
     >
-      <div class="window-bar">
+      <div v-if="window.type != 'continue'" class="window-bar">
         <img
           v-on:click="$emit('closeWindow', index)"
           class="x"
@@ -20,6 +24,14 @@
         </div>
         <div v-if="window.type == 'text'" class="text">
           {{ window.text }}
+        </div>
+        <div v-if="window.type == 'continue'" class="continue">
+          <button v-on:click="$emit('nextCollection', index)">
+            <img
+              src="https://media.giphy.com/media/MTt7Eh8WPudlStuY7L/giphy.gif"
+              alt="Next button"
+            />
+          </button>
         </div>
       </div>
     </div>
@@ -38,15 +50,18 @@ export default {
     return {};
   },
   computed: {
-    left: () => {
-      return Math.ceil(Math.random() * 80);
-    },
-    top: () => {
-      return Math.ceil(Math.random() * 80);
-    },
-    size: () => {
-      return Math.ceil(Math.random() * 10) + 10;
-    },
+    // left: () => {
+    //   // $emit("setLeft", index);
+    //   return Math.ceil(Math.random() * 80);
+    // },
+    // top: () => {
+    //   // $emit("setTop", index);
+    //   return Math.ceil(Math.random() * 80);
+    // },
+    // size: () => {
+    //   // $emit("setSize", index);
+    //   return Math.ceil(Math.random() * 10) + 10;
+    // },
   },
   mounted() {
     $(() => {
@@ -114,5 +129,20 @@ export default {
   text-align: left;
   font-family: "Courier New", monospace;
   font-weight: bold;
+}
+
+.window-contents .continue button {
+  background: #ffb1b9;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.window-contents .continue button:hover {
+  background: #6aaae4;
+  cursor: url("~@/assets/pointer.png"), auto;
 }
 </style>
