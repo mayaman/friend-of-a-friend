@@ -15,7 +15,7 @@
       v-bind:index="index"
       v-on:closeWindow="closeWindow"
     ></Window>
-    <div class="marquee">
+    <!-- <div class="marquee">
       <img
         draggable="false"
         alt="Pixelated text that says Friend of a Friend"
@@ -26,15 +26,7 @@
         alt="Pixelated text that says Friend of a Friend"
         src="./assets/foaf.png"
       />
-    </div>
-    <!-- <p class="marquee">
-      <span
-        ><img
-          draggable="false"
-          alt="Pixelated text that says Friend of a Friend"
-          src="./assets/foaf.png"
-      /></span>
-    </p> -->
+    </div> -->
   </div>
 </template>
 
@@ -49,16 +41,62 @@ export default {
   data() {
     return {
       allWindows: [
-        { imgPath: "1991_large_bw.png" },
-        { imgPath: "connection_large_color.png" },
-        { imgPath: "connection_small_color.png" },
-        { imgPath: "wavywifi.png" },
-        { imgPath: "photo_computer.png" },
-        { imgPath: "soundwave.png" },
-        { imgPath: "foaf_circle_large.png" },
-        { imgPath: "photo_selfie.png" },
+        {
+          type: "text",
+          text:
+            "For our next collection, we wanted to go back in time and re-explore the World Wide Web as we first dreamt it...",
+        },
+        { type: "image", imgPath: "1991_large_bw.png" },
+        { type: "image", imgPath: "matisse.jpg" },
+        { type: "image", imgPath: "connection_large_color.png" },
+        { type: "image", imgPath: "connection_small_color.png" },
+        { type: "image", imgPath: "wavywifi.png" },
+        { type: "image", imgPath: "photo_computer.png" },
+        { type: "image", imgPath: "soundwave.png" },
+        { type: "image", imgPath: "foaf_circle_large.png" },
+        { type: "image", imgPath: "internet.gif" },
+        { type: "image", imgPath: "photo_selfie.png" },
       ],
-      openWindows: [{ imgPath: "1991_large_bw.png" }],
+      windowCollections: [
+        [
+          {
+            type: "text",
+            text:
+              "For our next collection, we wanted to go back in time and re-explore the World Wide Web as we first dreamt it...",
+          },
+        ],
+        [
+          { type: "image", imgPath: "matisse.jpg" },
+          {
+            type: "text",
+            text:
+              "We were inspired by the painting Dance by Henri Matisse. To us, this image represents connection. Dancers reaching for one another in space.",
+          },
+        ],
+        [
+          { type: "image", imgPath: "connection_large_color.png" },
+          { type: "image", imgPath: "connection_small_color.png" },
+          { type: "image", imgPath: "photo_computer.png" },
+          {
+            type: "text",
+            text: "We translated this image into our own pixelated design.",
+          },
+        ],
+        [
+          { type: "image", imgPath: "1991_large_bw.png" },
+          {
+            type: "text",
+            text: "Both of us were born in 1991.",
+          },
+        ],
+      ],
+      openWindows: [
+        {
+          type: "text",
+          text:
+            "For our next collection, we wanted to go back in time and re-explore the World Wide Web as we first dreamt it...",
+        },
+      ],
       currentWindowIndex: 0,
     };
   },
@@ -68,13 +106,22 @@ export default {
   methods: {
     closeWindow(index) {
       console.log("trying to close window: ", index);
+      // Remove current window
       this.openWindows.splice(index, 1);
+
       this.currentWindowIndex =
         (this.currentWindowIndex + 1) % this.allWindows.length;
-      this.openWindows.push(this.allWindows[this.currentWindowIndex]);
-      this.currentWindowIndex =
-        (this.currentWindowIndex + 1) % this.allWindows.length;
-      this.openWindows.push(this.allWindows[this.currentWindowIndex]);
+
+      this.windowCollections[this.currentWindowIndex].forEach((window) => {
+        console.log("adding window: ");
+        console.log(window);
+        this.openWindows.push(window);
+      });
+
+      // this.openWindows.push(this.allWindows[this.currentWindowIndex]);
+      // this.currentWindowIndex =
+      //   (this.currentWindowIndex + 1) % this.allWindows.length;
+      // this.openWindows.push(this.allWindows[this.currentWindowIndex]);
     },
   },
 };
@@ -83,11 +130,11 @@ export default {
 <style>
 body {
   background: black;
+  cursor: url("~@/assets/mouse.png"), auto;
   margin: 0px;
   max-width: 100vw;
   max-height: 100vh;
   overflow: hidden;
-  cursor: url("~@/assets/mouse.png");
 }
 
 #connection-logo {
@@ -97,13 +144,16 @@ body {
   -webkit-animation: rotation 30s infinite linear;
 }
 
+#connection-logo:hover {
+  /* animation-play-state: paused; */
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: white;
-  background: black;
   overflow: hidden;
 }
 

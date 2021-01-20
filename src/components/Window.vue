@@ -12,10 +12,15 @@
         />
       </div>
       <div class="window-contents">
-        <img
-          draggable="false"
-          :src="require('@/assets/' + window.imgPath + '')"
-        />
+        <div v-if="window.type == 'image'">
+          <img
+            draggable="false"
+            :src="require('@/assets/' + window.imgPath + '')"
+          />
+        </div>
+        <div v-if="window.type == 'text'" class="text">
+          {{ window.text }}
+        </div>
       </div>
     </div>
   </transition>
@@ -34,19 +39,22 @@ export default {
   },
   computed: {
     left: () => {
-      return Math.ceil(Math.random() * 90);
+      return Math.ceil(Math.random() * 80);
     },
     top: () => {
       return Math.ceil(Math.random() * 80);
     },
     size: () => {
-      return Math.ceil(Math.random() * 8) + 10;
+      return Math.ceil(Math.random() * 10) + 10;
     },
   },
   mounted() {
     $(() => {
       $(".draggable").draggable({ containment: "parent" });
     });
+
+    console.log(window);
+    console.log(window.type);
   },
   methods: {},
 };
@@ -57,44 +65,54 @@ export default {
 .window-container {
   background: white;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  border: 3px solid black;
 }
 
 .window-container:hover {
-  /* background: hotpink; */
+  border: 3px solid #ffb1b9;
+}
+
+.window-container:hover > .window-bar {
+  border-bottom: 3px solid #ffb1b9;
 }
 
 .draggable:hover {
-  cursor: crosshair;
+  cursor: url("~@/assets/mouse.png"), auto;
 }
 
 .window-bar {
   height: 30px;
   background: #ffb1b9;
-  border: 1px solid black;
+  border-bottom: 3px solid black;
   position: relative;
 }
 
 .window-bar .x {
   height: 10px;
   position: absolute;
-  left: 10px;
+  left: 15px;
   top: 50%;
-  transform: translate(0%, -50%);
+  padding: 5px;
+  transform: translate(-50%, -50%);
 }
 
 .window-bar .x:hover {
   height: 15px;
-  cursor: pointer;
+  cursor: url("~@/assets/pointer.png"), auto;
 }
 
 .window-contents {
   padding: 15px;
-  border: 1px solid black;
 }
 
 .window-contents img {
   max-width: 100%;
+}
+
+.window-contents .text {
+  color: black;
+  text-align: left;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
 }
 </style>
