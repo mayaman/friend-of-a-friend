@@ -1,6 +1,7 @@
 <template>
-  <transition name="fade">
+  <transition name="" mode="out-in">
     <div
+      @mousedown="moveToFront"
       class="draggable window-container"
       v-bind:style="{
         left: window.left + '%',
@@ -33,6 +34,16 @@
             />
           </button>
         </div>
+        <div v-if="window.type == 'ytvideo'" class="ytvideo">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/HKLxvdFtlZE"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
     </div>
   </transition>
@@ -45,50 +56,54 @@ export default {
     imgPath: String,
     index: Number,
     window: Object,
+    openDelay: Number,
   },
   data() {
-    return {};
+    return {
+      active: false,
+    };
   },
-  computed: {
-    // left: () => {
-    //   // $emit("setLeft", index);
-    //   return Math.ceil(Math.random() * 80);
-    // },
-    // top: () => {
-    //   // $emit("setTop", index);
-    //   return Math.ceil(Math.random() * 80);
-    // },
-    // size: () => {
-    //   // $emit("setSize", index);
-    //   return Math.ceil(Math.random() * 10) + 10;
-    // },
-  },
+  computed: {},
   mounted() {
     $(() => {
-      $(".draggable").draggable({ containment: "parent" });
+      $(".draggable").draggable({ containment: "#app" });
     });
-
-    console.log(window);
-    console.log(window.type);
   },
-  methods: {},
+  methods: {
+    moveToFront() {
+      // console.log("trying to move to front");
+      // console.log(e.target);
+      // e.target.style.zIndex = e.target.style.zIndex++;
+    },
+    activate() {
+      setTimeout(() => {
+        this.active = true;
+      }, this.window.openDelay * 1000);
+    },
+    closeWindow() {
+      this.active = false;
+    },
+    getOpenDelay() {
+      return this.openDelay;
+    },
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .window-container {
-  background: white;
+  background: #f5f5f5;
   position: absolute;
-  border: 3px solid black;
+  border: 2px solid black;
 }
 
 .window-container:hover {
-  border: 3px solid #ffb1b9;
+  border: 2px solid #ffb1b9;
 }
 
 .window-container:hover > .window-bar {
-  border-bottom: 3px solid #ffb1b9;
+  border-bottom: 2px solid #ffb1b9;
 }
 
 .draggable:hover {
@@ -96,9 +111,9 @@ export default {
 }
 
 .window-bar {
-  height: 30px;
+  height: 25px;
   background: #ffb1b9;
-  border-bottom: 3px solid black;
+  border-bottom: 2px solid black;
   position: relative;
 }
 
@@ -126,23 +141,16 @@ export default {
 
 .window-contents .text {
   color: black;
-  text-align: left;
-  font-family: "Courier New", monospace;
-  font-weight: bold;
+  text-align: center;
+  font-family: "VT323", monospace;
+  font-size: 36px;
+  display: inline;
+  line-height: 40px;
+  /* background: lightgreen; */
 }
 
-.window-contents .continue button {
-  background: none;
-  border: none;
-  padding: 5px;
-  border-radius: 5px;
-  font-family: "Courier New", monospace;
-  font-weight: bold;
-  font-size: 24px;
-  outline-color: #ffb1b9;
-}
-
-.window-contents .continue button:hover {
-  cursor: url("~@/assets/pointer.png"), auto;
+/* YOUTUBE EMBED */
+.ytvideo iframe {
+  max-width: 100%;
 }
 </style>
