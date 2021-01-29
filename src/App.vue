@@ -395,7 +395,7 @@ export default {
   methods: {
     handleClick(e) {
       this.showContinue = false;
-      (this.windowData[this.currentPopupIndex]);
+      this.windowData[this.currentPopupIndex];
       let leftPos =
         e.x -
         (window.innerWidth * this.windowData[this.currentPopupIndex].size) /
@@ -404,7 +404,7 @@ export default {
       if (leftPos < 0) {
         leftPos = 0;
       }
-      ("LEFT POS: ", leftPos);
+      "LEFT POS: ", leftPos;
       this.windowData[this.currentPopupIndex].left = leftPos;
 
       let topPos = e.y - 50;
@@ -414,8 +414,8 @@ export default {
       this.windowData[this.currentPopupIndex].top = topPos;
 
       this.currentPopupIndex++;
-      ("clicked on body, current index: ", this.currentPopupIndex);
-      (e);
+      "clicked on body, current index: ", this.currentPopupIndex;
+      e;
 
       // let popupClass = Vue.extend(Popup);
       // let newWindow = new popupClass({
@@ -446,10 +446,6 @@ export default {
         let idString = "collection" + this.currentWindowIndex + "window" + w;
         this.$refs[idString][0].activate();
       }
-
-      setTimeout(() => {
-        ();
-      });
     },
   },
 };

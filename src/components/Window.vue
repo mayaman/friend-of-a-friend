@@ -75,11 +75,7 @@ export default {
       // (e.target);
       // e.target.style.zIndex = e.target.style.zIndex++;
     },
-    activate() {
-      setTimeout(() => {
-        this.active = true;
-      }, this.window.openDelay * 1000);
-    },
+    activate() {},
     closeWindow() {
       this.active = false;
     },

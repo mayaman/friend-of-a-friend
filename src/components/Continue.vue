@@ -53,14 +53,6 @@ export default {
   },
   methods: {
     updatedCollection() {
-      // this.active = false;
-      // setTimeout(() => {
-      //   this.active = true;
-      // }, 7000);
-      // if (this.firstEncounter) {
-      //   this.firstEncounter = false;
-      // }
-      // this.$emit("nextCollection");
       this.active = false;
     },
   },
