@@ -81,8 +81,8 @@ export default {
   },
   methods: {
     moveToFront() {
-      // console.log("trying to move to front");
-      // console.log(e.target);
+      // ("trying to move to front");
+      // (e.target);
       // e.target.style.zIndex = e.target.style.zIndex++;
     },
     activate() {
