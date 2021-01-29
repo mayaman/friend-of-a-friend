@@ -7,7 +7,7 @@
       alt="We are all searching for connection written in a circle"
       src="./assets/connection_large_color.png"
     />
-    <div class="info">
+    <div class="info" @click="toggleInfo">
       ?
     </div>
     <!-- <div
@@ -48,6 +48,7 @@
       v-on:closeWindow="closeWindow"
       v-on:nextCollection="openNextCollection"
     ></Popup>
+    <Info v-show="showInfo" draggable="true" v-on:closeInfo="toggleInfo"></Info>
     <Continue
       v-show="showContinue"
       draggable="true"
@@ -91,6 +92,7 @@
 import Window from "./components/Window.vue";
 import Continue from "./components/Continue.vue";
 import Popup from "./components/Popup.vue";
+import Info from "./components/Info.vue";
 
 export default {
   name: "App",
@@ -98,6 +100,7 @@ export default {
     Window,
     Continue,
     Popup,
+    Info,
   },
   props: {},
   data() {
@@ -105,6 +108,7 @@ export default {
       currentWindowIndex: 0,
       currentPopupIndex: 0,
       showContinue: true,
+      showInfo: false,
       windowData: [
         {
           type: "design",
@@ -430,6 +434,9 @@ export default {
       //   },
       // }).$mount("#app");
     },
+    toggleInfo() {
+      this.showInfo = !this.showInfo;
+    },
     closeWindow(index) {
       console.log("trying to close window");
       let idString = "collection" + this.currentWindowIndex + "window" + index;
@@ -508,6 +515,27 @@ body {
   margin: 0px;
 }
 
+.info {
+  position: fixed;
+  border: 2px solid #ffb1b9;
+  border-radius: 5px;
+  color: black;
+  background: #ffb1b9;
+  top: 10px;
+  right: 10px;
+  height: 10px;
+  text-align: center;
+  font-family: "VT323", monospace;
+  font-size: 24px;
+  display: inline;
+  line-height: 10px;
+  padding: 7px;
+}
+
+.info:hover {
+  cursor: url("~@/assets/pointer.png"), pointer;
+}
+
 /* TRANSITION */
 
 .fade-enter-active,
@@ -523,7 +551,7 @@ body {
 .marquee {
   width: 100%;
   display: inline-flex;
-  position: absolute;
+  position: fixed;
   left: 10px;
   bottom: 0;
   z-index: 999;
