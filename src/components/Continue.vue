@@ -5,16 +5,17 @@
         WELCOME TO FRIEND OF A FRIEND'S POPUP LOOKBOOK... CLICK ANYWHERE TO
         START
         <br />
+        <br />
         <div class="button-container">
-          <button v-on:click="updatedCollection()">
+          <!-- <button v-on:click="updatedCollection()">
             NO THANKS!
-          </button>
+          </button> -->
           <button v-on:click="updatedCollection()">
             <!-- <img
               src="https://media.giphy.com/media/MTt7Eh8WPudlStuY7L/giphy.gif"
               alt="Next button"
             /> -->
-            OKAY!!!!!
+            OKAY!
           </button>
         </div>
       </div>
@@ -112,7 +113,7 @@ export default {
 }
 
 .continue-options button:hover {
-  background: hotpink;
+  background: #f1817e;
 }
 
 #quick-continue {

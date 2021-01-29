@@ -130,15 +130,6 @@ export default {
           size: 40,
         },
         {
-          type: "text",
-          text: "This is kind of like a popup lookbook ;-)",
-          active: false,
-          bgColor: "#f5f5f5",
-          left: 0,
-          top: 0,
-          size: 32,
-        },
-        {
           type: "design",
           imgPath: "connection_large_color.png",
           active: false,
@@ -269,7 +260,7 @@ export default {
           type: "design",
           imgPath: "1991_large_bw.png",
           active: false,
-          bgColor: "#E6B800",
+          bgColor: "#f5f5f5",
           left: 0,
           top: 0,
           size: 13,
@@ -285,7 +276,7 @@ export default {
         },
         {
           type: "text",
-          text: "Wow, that's all!",
+          text: "That's all for now!",
           active: false,
           bgColor: "#f5f5f5",
           left: 0,
