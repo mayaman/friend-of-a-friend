@@ -89,7 +89,6 @@
 </template>
 
 <script>
-import Window from "./components/Window.vue";
 import Continue from "./components/Continue.vue";
 import Popup from "./components/Popup.vue";
 import Info from "./components/Info.vue";
@@ -97,7 +96,6 @@ import Info from "./components/Info.vue";
 export default {
   name: "App",
   components: {
-    Window,
     Continue,
     Popup,
     Info,
