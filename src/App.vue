@@ -456,6 +456,7 @@ body {
   margin: 0px;
   max-width: 100vw;
   max-height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   position: relative;
 }
@@ -469,15 +470,16 @@ body {
   overflow: hidden;
   position: inherit;
   height: 100%;
+  min-height: 100vh;
 }
 
 #connection-logo {
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  height: 80vh;
-  width: auto;
-  margin: 10vh;
+  width: 60vw;
+  height: auto;
+  margin-top: 10vh;
   -webkit-animation: rotation 30s infinite linear;
 }
 
