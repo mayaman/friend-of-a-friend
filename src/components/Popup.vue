@@ -8,8 +8,6 @@
         background: data.bgColor,
         left: data.left + 'px',
         top: data.top + 'px',
-        width: data.size + '%',
-        height: 'auto',
         maxWidth: data.size + '%',
         maxHeight: 'auto',
       }"
