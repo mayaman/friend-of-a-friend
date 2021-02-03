@@ -14,33 +14,6 @@
       <img class="foaf-logo" src="@/assets/foaf.png" />
       {{ instructionsText }}
     </div>
-    <!-- <div
-      class="collection-container"
-      v-for="(collection, collectionIndex) in windowCollections"
-      :key="collectionIndex"
-      v-show="currentWindowIndex == collectionIndex"
-    >
-      <Window
-        draggable="true"
-        v-for="(window, index) in collection"
-        :ref="'collection' + collectionIndex + 'window' + index"
-        v-bind:window="window"
-        v-bind:key="collectionIndex + index"
-        v-bind:index="index"
-        v-on:closeWindow="closeWindow"
-        v-on:nextCollection="openNextCollection"
-      ></Window>
-    </div> -->
-    <!-- <Window
-      draggable="true"
-      v-for="(window, index) in allWindows"
-      v-show="currentWindowIndividualIndex > index"
-      v-bind:window="window"
-      v-bind:key="window.imgPath + index"
-      v-bind:index="index"
-      v-on:closeWindow="closeWindow"
-      v-on:nextCollection="openNextCollection"
-    ></Window> -->
     <Popup
       draggable="true"
       v-for="(window, index) in windowData"

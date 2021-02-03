@@ -50,7 +50,7 @@
         <a target="_blank" href="https://www.friendofafriend.studio/shop"
           >friendofafriend.studio</a
         >
-        for a closer look <3
+        for a closer look ♥
       </div>
       <!-- <div class="window-contents continue" v-if="data.type == 'continue'">
         <button v-on:click="$emit('nextCollection', index)">
