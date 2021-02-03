@@ -45,7 +45,7 @@
       draggable="true"
       v-for="(window, index) in windowData"
       :ref="index"
-      v-show="currentPopupIndex > index"
+      v-show="numClicks > index"
       v-bind:data="window"
       v-bind:key="index"
       v-bind:index="index"
@@ -113,6 +113,12 @@ export default {
       showContinue: false,
       showInfo: false,
       instructionsText: "CLICK ANYWHERE TO EXPLORE...",
+      instructionsTextOptions: [
+        "CLICK ANYWHERE TO EXPLORE...",
+        "NOW CLICK SOMEWHERE ELSE. THERE'S LOTS TO SEE.",
+        "COOL, I THINK YOU'VE GOT IT!",
+        "ENJOY <3",
+      ],
       numClicks: 0,
       windowData: [
         {
@@ -288,12 +294,6 @@ export default {
           top: 0,
           size: 39,
         },
-      ],
-      instructionsTextOptions: [
-        "CLICK ANYWHERE TO EXPLORE...",
-        "KEEP CLICKING. LOTS MORE TO SEE.",
-        "COOL, I THINK YOU'VE GOT IT",
-        "ENJOY THE SITE :-)",
       ],
     };
   },
