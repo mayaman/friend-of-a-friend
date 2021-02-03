@@ -10,7 +10,8 @@
     <div class="info" @click="toggleInfo">
       ?
     </div>
-    <div class="instructions">
+    <div class="instructions" @click="handleClick">
+      <img class="foaf-logo" src="@/assets/foaf.png" />
       {{ instructionsText }}
     </div>
     <!-- <div
@@ -537,6 +538,12 @@ body {
   position: fixed;
   top: 10px;
   left: 10px;
+  width: 500px;
+  text-align: left;
+}
+
+.foaf-logo {
+  max-width: 100%;
 }
 
 /* TRANSITION */
