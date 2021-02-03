@@ -62,33 +62,71 @@
     ></Continue>
     <div class="marquee">
       <a href="https://www.friendofafriend.studio/shop" target="_blank">
-        <span class="marquee-text"
-          >SHOP THE COLLECTION !!! SHOP THE COLLECTION !!! SHOP THE COLLECTION
-          !!! SHOP THE COLLECTION !!! SHOP THE COLLECTION !!! SHOP THE
-          COLLECTION !!! SHOP THE COLLECTION !!! SHOP THE COLLECTION !!! SHOP
-          THE COLLECTION !!! SHOP THE COLLECTION !!! SHOP THE COLLECTION !!!
-          SHOP THE COLLECTION !!! SHOP THE COLLECTION !!! SHOP THE COLLECTION
-          !!! SHOP THE COLLECTION !!! SHOP THE COLLECTION !!! SHOP THE
-          COLLECTION !!! SHOP THE COLLECTION !!! SHOP THE COLLECTION !!! SHOP
-          THE COLLECTION !!! SHOP THE COLLECTION !!! SHOP THE COLLECTION !!!
-          SHOP THE COLLECTION !!! SHOP THE COLLECTION !!! SHOP THE COLLECTION
-          !!! SHOP THE COLLECTION !!! SHOP THE COLLECTION !!! SHOP THE
-          COLLECTION !!! SHOP THE COLLECTION !!! SHOP THE COLLECTION !!! SHOP
-          THE COLLECTION !!! SHOP THE COLLECTION !!! SHOP THE COLLECTION !!!
-          SHOP THE COLLECTION !!! SHOP THE COLLECTION !!! SHOP THE COLLECTION
-          !!! SHOP THE COLLECTION !!! SHOP THE COLLECTION !!! SHOP THE
-          COLLECTION !!! SHOP THE COLLECTION !!! SHOP THE COLLECTION !!! SHOP
-          THE COLLECTION !!! SHOP THE COLLECTION !!! SHOP THE COLLECTION !!!
-          SHOP THE COLLECTION !!! SHOP THE COLLECTION !!! SHOP THE COLLECTION
-          !!! SHOP THE COLLECTION !!! SHOP THE COLLECTION !!! SHOP THE
-          COLLECTION !!! SHOP THE COLLECTION !!! SHOP THE COLLECTION !!! SHOP
-          THE COLLECTION !!! SHOP THE COLLECTION !!! SHOP THE COLLECTION !!!
-          SHOP THE COLLECTION !!! SHOP THE COLLECTION !!! SHOP THE COLLECTION
-          !!! SHOP THE COLLECTION !!! SHOP THE COLLECTION !!! SHOP THE
-          COLLECTION !!! SHOP THE COLLECTION !!! SHOP THE COLLECTION !!! SHOP
-          THE COLLECTION !!! SHOP THE COLLECTION
-        </span></a
-      >
+        <span class="marquee-text" id="on"
+          >CLICK HERE TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP THE COLLECTION
+          ➩ CLICK HERE TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP THE
+          COLLECTION ➩ CLICK HERE TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP
+          THE COLLECTION ➩ CLICK TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP THE
+          COLLECTION ➩ CLICK HERE TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP
+          THE COLLECTION ➩ CLICK TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP THE
+          COLLECTION ➩ CLICK HERE TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP
+          THE COLLECTION ➩ CLICK TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP THE
+          COLLECTION ➩ CLICK HERE TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP
+          THE COLLECTION ➩ CLICK TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP THE
+          COLLECTION ➩ CLICK HERE TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP
+          THE COLLECTION ➩ CLICK TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP THE
+          COLLECTION ➩ CLICK HERE TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP
+          THE COLLECTION ➩ CLICK TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP THE
+          COLLECTION ➩ CLICK HERE TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP
+          THE COLLECTION ➩ CLICK TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP THE
+          COLLECTION ➩ CLICK HERE TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP
+          THE COLLECTION ➩ CLICK TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP THE
+          COLLECTION ➩ CLICK HERE TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP
+          THE COLLECTION ➩ CLICK TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP THE
+          COLLECTION ➩ CLICK HERE TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP
+          THE COLLECTION ➩ CLICK TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP THE
+          COLLECTION ➩ CLICK HERE TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP
+          THE COLLECTION ➩ CLICK TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP THE
+          COLLECTION ➩ CLICK HERE TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP
+          THE COLLECTION ➩ CLICK TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP THE
+          COLLECTION ➩ CLICK HERE TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP
+          THE COLLECTION ➩ CLICK TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP THE
+          COLLECTION ➩
+        </span>
+        <span class="marquee-text" id="off"
+          >➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+          LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩ LET'S GO ➩
+        </span>
+      </a>
     </div>
   </div>
 </template>
@@ -122,15 +160,6 @@ export default {
       numClicks: 0,
       windowData: [
         {
-          type: "design",
-          imgPath: "foaf.png",
-          active: false,
-          bgColor: "#f5f5f5",
-          left: 0,
-          top: 0,
-          size: 25,
-        },
-        {
           type: "text",
           text:
             "For our next collection, we wanted to go back in time and re-explore the World Wide Web as we first dreamt it...",
@@ -138,16 +167,7 @@ export default {
           bgColor: "#f5f5f5",
           left: 0,
           top: 0,
-          size: 40,
-        },
-        {
-          type: "design",
-          imgPath: "connection_large_color.png",
-          active: false,
-          bgColor: "#f5f5f5",
-          left: 0,
-          top: 0,
-          size: 15,
+          size: 30,
         },
         {
           type: "image",
@@ -195,15 +215,6 @@ export default {
           size: 20,
         },
         {
-          type: "design",
-          imgPath: "foaf_circle_large.png",
-          active: false,
-          bgColor: "#f5f5f5",
-          left: 0,
-          top: 0,
-          size: 20,
-        },
-        {
           type: "image",
           imgPath: "photos/1991/PAU03531.jpg",
           active: false,
@@ -240,15 +251,6 @@ export default {
           size: 28,
         },
         {
-          type: "design",
-          imgPath: "connection_small_color.png",
-          active: false,
-          bgColor: "#f5f5f5",
-          left: 0,
-          top: 0,
-          size: 24,
-        },
-        {
           type: "image",
           imgPath: "photos/connection/PAU03781.jpg",
           active: false,
@@ -256,25 +258,6 @@ export default {
           left: 0,
           top: 0,
           size: 18,
-        },
-        {
-          type: "text",
-          text:
-            "We were both born in 1991 and grew up during the height of the Web 1.0 days...",
-          active: false,
-          bgColor: "#f5f5f5",
-          left: 0,
-          top: 0,
-          size: 39,
-        },
-        {
-          type: "design",
-          imgPath: "1991_large_bw.png",
-          active: false,
-          bgColor: "#f5f5f5",
-          left: 0,
-          top: 0,
-          size: 13,
         },
         {
           type: "image",
@@ -286,13 +269,21 @@ export default {
           size: 10,
         },
         {
-          type: "text",
-          text: "That's all for now!",
+          type: "design",
+          imgPath: "connection_small_color.png",
           active: false,
           bgColor: "#f5f5f5",
           left: 0,
           top: 0,
-          size: 39,
+          size: 24,
+        },
+        {
+          type: "finale",
+          active: false,
+          bgColor: "#f5f5f5",
+          left: 0,
+          top: 0,
+          size: 26,
         },
       ],
     };
@@ -424,7 +415,7 @@ export default {
       this.windowData[this.currentPopupIndex].left = leftPos;
 
       // Select y position
-      let topPos = e.y - 50;
+      let topPos = e.y - 100;
       if (topPos > window.innerHeight - 100) {
         topPos = topPos - 100;
       }
@@ -458,6 +449,10 @@ export default {
 </script>
 
 <style>
+.italics {
+  font-style: italic;
+}
+
 body {
   background: black;
   cursor: url("~@/assets/mouse.png"), auto;
@@ -476,9 +471,10 @@ body {
   text-align: center;
   color: #f5f5f5;
   overflow: hidden;
-  position: inherit;
+  position: relative;
   height: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 32px);
+  max-height: calc(100vh - 32px);
 }
 
 #connection-logo {
@@ -573,7 +569,6 @@ body {
   bottom: 0;
   z-index: 999;
   cursor: url("~@/assets/pointer_xs.png"), pointer;
-  background: #f5f5f5;
 }
 
 .marquee-text {
@@ -588,22 +583,42 @@ body {
   font-size: 24px;
   display: inline-block;
   line-height: 30px;
-  background: #f5f5f5;
+  /* background: #f7f746; */
+  background: #f2817f;
   cursor: url("~@/assets/pointer.png"), pointer;
   z-index: 99;
 }
 
 .marquee-text:hover {
-  animation-play-state: paused;
-  background: #ffb1b9;
+  /* animation-play-state: paused; */
+  /* background: #ffb1b9; */
+  /* color: #f7f746; */
+  color: white;
+  /* color: #4a8fcc; */
+  /* background: white; */
+  /* background: black; */
 }
 
 .marquee a {
   color: black;
   z-index: 9999;
+  text-decoration: none;
 }
 
-.marquee a:hover {
+.marquee a:hover span#on {
+  display: inline;
+}
+
+.marquee a:hover span#on {
+  display: none;
+}
+
+.marquee a span#off {
+  display: none;
+}
+
+.marquee a:hover span#off {
+  display: block;
 }
 
 @-webkit-keyframes marquee {
@@ -614,5 +629,15 @@ body {
   100% {
     transform: translate(-70%, 0);
   }
+}
+
+.text a {
+  color: #f2817f;
+  text-decoration: none;
+}
+
+.text a:hover {
+  cursor: url("~@/assets/pointer.png"), pointer;
+  color: #4a8fcc;
 }
 </style>

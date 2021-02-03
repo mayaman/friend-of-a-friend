@@ -4,10 +4,10 @@
       class="draggable window-container"
       v-show="active"
       v-bind:style="{
-        left: 40 + '%',
+        left: 32.5 + '%',
         top: 30 + '%',
         width: 'auto',
-        maxWidth: '20%',
+        maxWidth: '35%',
       }"
     >
       <div class="window-bar">
@@ -17,9 +17,14 @@
 
       <div class="window-contents text">
         <p>
-          This website celebrates the launch of Friend of a Friend's new
-          Internet collection. It was designed and developed by friend of Friend
-          of a Friend,
+          This popup window shop celebrates the launch of Friend of a Friend's
+          new Internet inspired collection
+          <a href="https://www.friendofafriend.studio/shop" target="_blank"
+            ><span class="italics">Searching for connection</span></a
+          >.
+        </p>
+        <p>
+          It was designed and developed by friend of Friend of a Friend,
           <a target="_blank" href="https://mayaontheinter.net/">Maya Man</a>.
         </p>
       </div>
@@ -126,14 +131,5 @@ export default {
   display: inline;
   line-height: 30px;
   padding: 15px;
-}
-
-.text a {
-  color: black;
-}
-
-.text a:hover {
-  cursor: url("~@/assets/pointer.png"), pointer;
-  color: #ffb1b9;
 }
 </style>

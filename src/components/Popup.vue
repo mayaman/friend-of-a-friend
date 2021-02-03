@@ -36,6 +36,22 @@
       >
         {{ data.text }}
       </div>
+      <div
+        @click.self="handlePopupClick"
+        class="window-contents text"
+        v-if="data.type == 'finale'"
+      >
+        Nice, you've seen it all!
+        <br />
+        Thanks for popup window shopping with us : - )
+        <br />
+        <br />
+        Come inside @
+        <a target="_blank" href="https://www.friendofafriend.studio/shop"
+          >friendofafriend.studio</a
+        >
+        for a closer look <3
+      </div>
       <!-- <div class="window-contents continue" v-if="data.type == 'continue'">
         <button v-on:click="$emit('nextCollection', index)">
           <img
