@@ -10,6 +10,9 @@
     <div class="info" @click="toggleInfo">
       ?
     </div>
+    <div class="instructions">
+      {{ instructionsText }}
+    </div>
     <!-- <div
       class="collection-container"
       v-for="(collection, collectionIndex) in windowCollections"
@@ -47,6 +50,7 @@
       v-bind:index="index"
       v-on:closeWindow="closeWindow"
       v-on:nextCollection="openNextCollection"
+      v-on:handleClick="handleClick"
     ></Popup>
     <Info v-show="showInfo" draggable="true" v-on:closeInfo="toggleInfo"></Info>
     <Continue
@@ -105,8 +109,10 @@ export default {
     return {
       currentWindowIndex: 0,
       currentPopupIndex: 0,
-      showContinue: true,
+      showContinue: false,
       showInfo: false,
+      instructionsText: "CLICK ANYWHERE TO EXPLORE...",
+      numClicks: 0,
       windowData: [
         {
           type: "design",
@@ -282,6 +288,12 @@ export default {
           size: 39,
         },
       ],
+      instructionsTextOptions: [
+        "CLICK ANYWHERE TO EXPLORE...",
+        "KEEP CLICKING. LOTS MORE TO SEE.",
+        "COOL, I THINK YOU'VE GOT IT",
+        "ENJOY THE SITE :-)",
+      ],
     };
   },
   computed: {
@@ -387,13 +399,19 @@ export default {
       return tempAllWindows;
     },
   },
-  mounted() {
-    // this.activateCollectionWindows();
-  },
+  mounted() {},
   methods: {
     handleClick(e) {
+      console.log("handling click, index: ", this.currentPopupIndex);
+      this.numClicks++;
       this.showContinue = false;
-      this.windowData[this.currentPopupIndex];
+      if (this.numClicks < this.instructionsTextOptions.length) {
+        this.instructionsText = this.instructionsTextOptions[this.numClicks];
+      } else {
+        this.instructionsText = "";
+      }
+
+      // Select x position
       let leftPos =
         e.x -
         (window.innerWidth * this.windowData[this.currentPopupIndex].size) /
@@ -402,32 +420,21 @@ export default {
       if (leftPos < 0) {
         leftPos = 0;
       }
-      "LEFT POS: ", leftPos;
       this.windowData[this.currentPopupIndex].left = leftPos;
 
+      // Select y position
       let topPos = e.y - 50;
       if (topPos > window.innerHeight - 100) {
         topPos = topPos - 100;
       }
       this.windowData[this.currentPopupIndex].top = topPos;
 
-      this.currentPopupIndex++;
-      "clicked on body, current index: ", this.currentPopupIndex;
-      e;
-
-      // let popupClass = Vue.extend(Popup);
-      // let newWindow = new popupClass({
-      //   propsData: {
-      //     data: this.windowData[this.currentPopupIndex],
-      //     index: this.currentPopupIndex,
-      //   },
-      // }).$mount("#app");
+      this.currentPopupIndex = this.currentPopupIndex + 1;
     },
     toggleInfo() {
       this.showInfo = !this.showInfo;
     },
     closeWindow(index) {
-      ("trying to close window");
       let idString = "collection" + this.currentWindowIndex + "window" + index;
       this.$refs[idString][0].closeWindow();
     },
@@ -477,9 +484,9 @@ body {
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  width: 60vw;
-  height: auto;
-  margin-top: 10vh;
+  height: 60vh;
+  width: auto;
+  margin: 20vh auto;
   -webkit-animation: rotation 30s infinite linear;
 }
 
@@ -523,14 +530,30 @@ body {
   cursor: url("~@/assets/pointer.png"), pointer;
 }
 
+.instructions {
+  color: white;
+  font-family: "VT323", monospace;
+  font-size: 24px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
 /* TRANSITION */
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
+.bounce-enter-active {
+  animation: bounce-in 0.3s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
+.bounce-leave-active {
+  animation: bounce-in 0.3s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* MARQUEE SHIT */

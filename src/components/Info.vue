@@ -1,12 +1,13 @@
 <template>
-  <transition name="fade" mode="out-in">
+  <transition name="bounce">
     <div
       class="draggable window-container"
       v-show="active"
       v-bind:style="{
         left: 40 + '%',
         top: 30 + '%',
-        maxWidth: 20 + 'vw',
+        width: 'auto',
+        maxWidth: '20%',
       }"
     >
       <div class="window-bar">
@@ -113,11 +114,6 @@ export default {
 
 .window-contents {
   /* padding: 15px; */
-  display: inline-flex;
-}
-
-.window-contents img {
-  max-width: 100%;
   display: inline-flex;
 }
 

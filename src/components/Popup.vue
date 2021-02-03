@@ -1,5 +1,5 @@
 <template>
-  <transition name="fade" mode="out-in">
+  <transition name="bounce">
     <div
       @mousedown="moveToFront"
       class="draggable window-container"
@@ -8,36 +8,45 @@
         background: data.bgColor,
         left: data.left + 'px',
         top: data.top + 'px',
-        maxWidth: data.size + 'vw',
+        width: data.size + '%',
+        height: 'auto',
+        maxWidth: data.size + '%',
+        maxHeight: 'auto',
       }"
     >
       <div v-if="data.type != 'continue'" class="window-bar">
-        <img @click="closeWindow" class="x" src="@/assets/x.png" />
+        <img @click.self="closeWindow" class="x" src="@/assets/x.png" />
       </div>
       <div class="window-contents design" v-if="data.type == 'design'">
         <img
+          @click.self="handlePopupClick"
           draggable="false"
           :src="require('@/assets/' + data.imgPath + '')"
         />
       </div>
-      <div class="window-contents" v-if="data.type == 'image'">
+      <div class="window-contents image" v-if="data.type == 'image'">
         <img
+          @click.self="handlePopupClick"
           draggable="false"
           :src="require('@/assets/' + data.imgPath + '')"
         />
       </div>
-      <div class="window-contents text" v-if="data.type == 'text'">
+      <div
+        @click.self="handlePopupClick"
+        class="window-contents text"
+        v-if="data.type == 'text'"
+      >
         {{ data.text }}
       </div>
-      <div class="window-contents continue" v-if="data.type == 'continue'">
+      <!-- <div class="window-contents continue" v-if="data.type == 'continue'">
         <button v-on:click="$emit('nextCollection', index)">
           <img
             src="https://media.giphy.com/media/MTt7Eh8WPudlStuY7L/giphy.gif"
             alt="Next button"
           />
         </button>
-      </div>
-      <div class="window-contents ytvideo" v-if="data.type == 'ytvideo'">
+      </div> -->
+      <!-- <div class="window-contents ytvideo" v-if="data.type == 'ytvideo'">
         <iframe
           width="560"
           height="315"
@@ -46,7 +55,7 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
-      </div>
+      </div> -->
     </div>
   </transition>
 </template>
@@ -61,6 +70,8 @@ export default {
   data() {
     return {
       active: true,
+      isDragging: false,
+      mouseIsDown: false,
     };
   },
   computed: {
@@ -76,7 +87,27 @@ export default {
   },
   mounted() {
     $(() => {
-      $(".draggable").draggable({ containment: "#app" });
+      $(".draggable")
+        .draggable({
+          containment: "#app",
+        })
+        .mousedown(() => {
+          this.isDragging = false;
+          this.mouseIsDown = true;
+        })
+        .mousemove(() => {
+          if (this.mouseIsDown) {
+            this.isDragging = true;
+          }
+        })
+        .mouseup(() => {
+          this.mouseIsDown = false;
+          if (this.isDragging) {
+            setTimeout(() => {
+              this.isDragging = false;
+            }, 1);
+          }
+        });
     });
   },
   methods: {
@@ -87,6 +118,11 @@ export default {
     },
     closeWindow() {
       this.active = false;
+    },
+    handlePopupClick(e) {
+      if (!this.isDragging) {
+        this.$emit("handleClick", e);
+      }
     },
     getOpenDelay() {
       return this.openDelay;
@@ -110,6 +146,9 @@ export default {
 
 .window-container:hover > .window-bar {
   border-bottom: 2px solid #ffb1b9;
+}
+
+.draggable {
 }
 
 .draggable:hover {
@@ -144,7 +183,12 @@ export default {
 
 .window-contents img {
   max-width: 100%;
+  height: auto;
   display: inline-flex;
+}
+
+.image {
+  display: contents;
 }
 
 .text,
@@ -153,7 +197,7 @@ export default {
   text-align: center;
   font-family: "VT323", monospace;
   font-size: 24px;
-  display: inline;
+  display: block;
   line-height: 30px;
   padding: 15px;
 }
