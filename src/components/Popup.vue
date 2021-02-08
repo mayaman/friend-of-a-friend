@@ -41,7 +41,6 @@
         class="window-contents text"
         v-if="data.type == 'finale'"
       >
-        Nice, you've seen it all!
         <br />
         Thanks for popup window shopping with us : - )
         <br />

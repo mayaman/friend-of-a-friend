@@ -140,20 +140,11 @@ export default {
           bgColor: "#f5f5f5",
           left: 0,
           top: 0,
-          size: 30,
+          size: 20,
         },
         {
           type: "image",
-          imgPath: "photos/connection/photo_computer.png",
-          active: false,
-          bgColor: "#f5f5f5",
-          left: 0,
-          top: 0,
-          size: 18,
-        },
-        {
-          type: "image",
-          imgPath: "KnowledgeIsPower_Animation.gif",
+          imgPath: "photos/PAU03667.jpg",
           active: false,
           bgColor: "#f5f5f5",
           left: 0,
@@ -162,43 +153,52 @@ export default {
         },
         {
           type: "image",
-          imgPath: "photos/1991/PAU03371.jpg",
+          imgPath: "photos/PAU03312.jpg",
           active: false,
           bgColor: "#f5f5f5",
           left: 0,
           top: 0,
-          size: 10,
+          size: 26,
         },
         {
           type: "image",
-          imgPath: "photos/connection/PAU03254.jpg",
+          imgPath: "gifs/FOF_WeAreAllSearchingForConnection.gif",
           active: false,
           bgColor: "#f5f5f5",
           left: 0,
           top: 0,
-          size: 14,
+          size: 48,
         },
         {
           type: "image",
-          imgPath: "FOF_Wifi_Animation.gif",
+          imgPath: "photos/PAU03270.jpg",
           active: false,
           bgColor: "#f5f5f5",
           left: 0,
           top: 0,
-          size: 20,
+          size: 37,
         },
         {
           type: "image",
-          imgPath: "photos/1991/PAU03531.jpg",
+          imgPath: "photos/PAU03675.jpg",
           active: false,
           bgColor: "#f5f5f5",
           left: 0,
           top: 0,
-          size: 9,
+          size: 32,
         },
         {
           type: "image",
-          imgPath: "FOF_WeAreAllSearchingForConnection.gif",
+          imgPath: "photos/PAU03286.jpg",
+          active: false,
+          bgColor: "#f5f5f5",
+          left: 0,
+          top: 0,
+          size: 27,
+        },
+        {
+          type: "image",
+          imgPath: "photos/PAU03338.jpg",
           active: false,
           bgColor: "#f5f5f5",
           left: 0,
@@ -207,7 +207,7 @@ export default {
         },
         {
           type: "image",
-          imgPath: "photos/connection/PAU03654.jpg",
+          imgPath: "photos/PAU03357.jpg",
           active: false,
           bgColor: "#f5f5f5",
           left: 0,
@@ -216,16 +216,7 @@ export default {
         },
         {
           type: "image",
-          imgPath: "photos/1991/PAU03593.jpg",
-          active: false,
-          bgColor: "#f5f5f5",
-          left: 0,
-          top: 0,
-          size: 28,
-        },
-        {
-          type: "image",
-          imgPath: "photos/connection/PAU03781.jpg",
+          imgPath: "photos/PAU03368.jpg",
           active: false,
           bgColor: "#f5f5f5",
           left: 0,
@@ -234,12 +225,120 @@ export default {
         },
         {
           type: "image",
-          imgPath: "photos/1991/PAU03333.jpg",
+          imgPath: "gifs/KnowledgeIsPower_Animation.gif",
           active: false,
           bgColor: "#f5f5f5",
           left: 0,
           top: 0,
-          size: 10,
+          size: 24,
+        },
+        {
+          type: "image",
+          imgPath: "photos/PAU03386.jpg",
+          active: false,
+          bgColor: "#f5f5f5",
+          left: 0,
+          top: 0,
+          size: 18,
+        },
+        {
+          type: "image",
+          imgPath: "photos/PAU03420.jpg",
+          active: false,
+          bgColor: "#f5f5f5",
+          left: 0,
+          top: 0,
+          size: 18,
+        },
+        {
+          type: "image",
+          imgPath: "photos/PAU03450.jpg",
+          active: false,
+          bgColor: "#f5f5f5",
+          left: 0,
+          top: 0,
+          size: 18,
+        },
+        {
+          type: "image",
+          imgPath: "photos/PAU03467.jpg",
+          active: false,
+          bgColor: "#f5f5f5",
+          left: 0,
+          top: 0,
+          size: 18,
+        },
+        {
+          type: "image",
+          imgPath: "photos/PAU03524.jpg",
+          active: false,
+          bgColor: "#f5f5f5",
+          left: 0,
+          top: 0,
+          size: 18,
+        },
+        {
+          type: "image",
+          imgPath: "photos/PAU03578.jpg",
+          active: false,
+          bgColor: "#f5f5f5",
+          left: 0,
+          top: 0,
+          size: 18,
+        },
+        {
+          type: "image",
+          imgPath: "gifs/FOF_Wifi_Animation.gif",
+          active: false,
+          bgColor: "#f5f5f5",
+          left: 0,
+          top: 0,
+          size: 24,
+        },
+        {
+          type: "image",
+          imgPath: "photos/PAU03597.jpg",
+          active: false,
+          bgColor: "#f5f5f5",
+          left: 0,
+          top: 0,
+          size: 18,
+        },
+        {
+          type: "image",
+          imgPath: "photos/PAU03631.jpg",
+          active: false,
+          bgColor: "#f5f5f5",
+          left: 0,
+          top: 0,
+          size: 18,
+        },
+        {
+          type: "image",
+          imgPath: "photos/PAU03694.jpg",
+          active: false,
+          bgColor: "#f5f5f5",
+          left: 0,
+          top: 0,
+          size: 18,
+        },
+        {
+          type: "image",
+          imgPath: "photos/PAU03781.jpg",
+          active: false,
+          bgColor: "#f5f5f5",
+          left: 0,
+          top: 0,
+          size: 18,
+        },
+        {
+          type: "image",
+          imgPath: "gifs/RollCaps.gif",
+          active: false,
+          bgColor: "#f5f5f5",
+          left: 0,
+          top: 0,
+          size: 24,
         },
         {
           type: "design",
@@ -367,7 +466,6 @@ export default {
   mounted() {},
   methods: {
     handleClick(e) {
-      console.log("handling click, index: ", this.currentPopupIndex);
       this.numClicks++;
       this.showContinue = false;
       if (this.numClicks < this.instructionsTextOptions.length) {
@@ -388,9 +486,9 @@ export default {
       this.windowData[this.currentPopupIndex].left = leftPos;
 
       // Select y position
-      let topPos = e.y - 100;
-      if (topPos > window.innerHeight - 100) {
-        topPos = topPos - 100;
+      let topPos = e.y - 150;
+      if (topPos > window.innerHeight - 150) {
+        topPos = topPos - 400;
       }
       this.windowData[this.currentPopupIndex].top = topPos;
 
@@ -481,10 +579,10 @@ body {
 
 .info {
   position: fixed;
-  border: 2px solid #ffb1b9;
-  border-radius: 5px;
+  border: 2px solid #f2817f;
+  border-radius: 3px;
   color: black;
-  background: #ffb1b9;
+  background: #f2817f;
   top: 10px;
   right: 10px;
   height: 10px;
@@ -493,7 +591,7 @@ body {
   font-size: 24px;
   display: inline;
   line-height: 10px;
-  padding: 7px;
+  padding: 5px;
 }
 
 .info:hover {
@@ -565,8 +663,9 @@ body {
 .marquee-text:hover {
   /* animation-play-state: paused; */
   /* background: #ffb1b9; */
+  background: #40edb9;
   /* color: #f7f746; */
-  color: white;
+  /* color: white; */
   /* color: #4a8fcc; */
   /* background: white; */
   /* background: black; */
