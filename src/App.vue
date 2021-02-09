@@ -592,6 +592,7 @@ body {
   display: inline;
   line-height: 10px;
   padding: 5px;
+  z-index: 9999999;
 }
 
 .info:hover {
