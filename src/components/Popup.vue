@@ -161,6 +161,12 @@ export default {
   border-bottom: 2px solid #ffb1b9;
 }
 
+@media only screen and (max-width: 768px) {
+  .window-container {
+    max-width: 65% !important;
+  }
+}
+
 .draggable {
 }
 

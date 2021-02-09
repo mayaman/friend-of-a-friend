@@ -1,15 +1,6 @@
 <template>
   <transition name="bounce">
-    <div
-      class="draggable window-container"
-      v-show="active"
-      v-bind:style="{
-        left: 32.5 + '%',
-        top: 30 + '%',
-        width: 'auto',
-        maxWidth: '35%',
-      }"
-    >
+    <div class="draggable window-container" v-show="active" v-bind:style="{}">
       <div class="window-bar">
         <img @click="closeWindow" class="x" src="@/assets/x.png" />
         *** INFO ***
@@ -81,6 +72,10 @@ export default {
   font-size: 18px;
   line-height: 20px;
   z-index: 999;
+  width: auto;
+  max-width: 35%;
+  left: 32.5%;
+  top: 30%;
 }
 
 .window-container:hover {
@@ -89,6 +84,14 @@ export default {
 
 .window-container:hover > .window-bar {
   border-bottom: 2px solid #ffb1b9;
+}
+
+@media only screen and (max-width: 768px) {
+  .window-container {
+    max-width: 90%;
+    left: 5%;
+    top: 30%;
+  }
 }
 
 .draggable:hover {
