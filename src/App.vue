@@ -12,6 +12,7 @@
     </div>
     <div class="instructions" @click="handleClick">
       <img class="foaf-logo" src="@/assets/foaf.png" />
+      <br />
       {{ instructionsText }}
     </div>
     <Popup
@@ -126,7 +127,7 @@ export default {
       instructionsText: "CLICK ANYWHERE TO EXPLORE...",
       instructionsTextOptions: [
         "CLICK ANYWHERE TO EXPLORE...",
-        "NOW CLICK SOMEWHERE ELSE. THERE'S LOTS TO SEE.",
+        "NOW CLICK SOMEWHERE ELSE...",
         "COOL, I THINK YOU'VE GOT IT!",
         "ENJOY <3",
       ],
@@ -637,7 +638,7 @@ body {
   width: 100%;
   display: inline-flex;
   position: fixed;
-  left: 10px;
+  left: 0px;
   bottom: 0;
   z-index: 999;
   cursor: url("~@/assets/pointer_xs.png"), pointer;
@@ -655,21 +656,24 @@ body {
   font-size: 24px;
   display: inline-block;
   line-height: 30px;
-  /* background: #f7f746; */
   background: #f2817f;
   cursor: url("~@/assets/pointer.png"), pointer;
   z-index: 99;
 }
 
+@media only screen and (max-width: 768px) {
+  .foaf-logo {
+    max-width: 50%;
+  }
+
+  .marquee-text {
+    font-size: 18px;
+  }
+}
+
 .marquee-text:hover {
-  /* animation-play-state: paused; */
-  /* background: #ffb1b9; */
+  animation-play-state: paused;
   background: #40edb9;
-  /* color: #f7f746; */
-  /* color: white; */
-  /* color: #4a8fcc; */
-  /* background: white; */
-  /* background: black; */
 }
 
 .marquee a {
