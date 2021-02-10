@@ -662,6 +662,19 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+  #connection-logo {
+    height: 40vh;
+    margin: 30vh auto;
+  }
+
+  .info {
+    font-size: 18px;
+  }
+
+  .instructions {
+    font-size: 18px;
+  }
+
   .foaf-logo {
     max-width: 50%;
   }
