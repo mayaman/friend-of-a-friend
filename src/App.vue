@@ -587,7 +587,7 @@ body {
 @media only screen and (max-width: 768px) {
   #connection-logo {
     height: 40vh;
-    margin: 30vh auto;
+    margin: 25vh auto;
   }
 
   .info {
