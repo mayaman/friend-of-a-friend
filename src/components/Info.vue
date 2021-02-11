@@ -7,8 +7,8 @@
       </div>
 
       <div class="window-contents text">
-        This popup window shop celebrates the launch of Friend of a Friend's new
-        Internet inspired collection
+        This popup window shop celebrates Friend of a Friend Studio's Internet
+        inspired collection
         <a href="https://www.friendofafriend.studio/shop" target="_blank"
           ><span class="italics">Searching for connection</span></a
         >.

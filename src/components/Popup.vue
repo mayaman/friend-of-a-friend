@@ -8,7 +8,7 @@
         background: data.bgColor,
         left: data.left + 'px',
         top: data.top + 'px',
-        maxWidth: data.size + '%',
+        maxWidth: size + '%',
         maxHeight: 'auto',
       }"
     >
@@ -58,6 +58,7 @@
 export default {
   name: "Popup",
   props: {
+    isMobile: Boolean,
     index: Number,
     data: Object,
     numClicks: Number,
@@ -69,6 +70,7 @@ export default {
       isDragging: false,
       mouseIsDown: false,
       topZIndex: 0,
+      size: 0,
     };
   },
   watch: {
@@ -79,18 +81,17 @@ export default {
       this.showing = num > this.index;
     },
   },
-  computed: {
-    left: () => {
-      return Math.ceil(Math.random() * 80);
-    },
-    top: () => {
-      return Math.ceil(Math.random() * 60);
-    },
-    size: () => {
-      return Math.ceil(Math.random() * 20) + 15;
-    },
-  },
+  computed: {},
   mounted() {
+    if (this.isMobile) {
+      this.size = this.data.size * 2;
+    } else {
+      this.size = this.data.size;
+    }
+
+    console.log("MOBILE: ", this.isMobile);
+    console.log("SIZE", this.size);
+
     $(() => {
       $(".draggable")
         .draggable({
@@ -215,7 +216,7 @@ export default {
 
 @media only screen and (max-width: 768px) {
   .window-container {
-    max-width: 75% !important;
+    max-width: 100%;
     width: auto;
   }
 
