@@ -1,9 +1,9 @@
 <template>
   <transition name="bounce">
     <div
-      @mousedown="moveToFront"
       class="draggable window-container"
       v-show="active"
+      v-bind:id="index"
       v-bind:style="{
         background: data.bgColor,
         left: data.left + 'px',
@@ -60,13 +60,25 @@ export default {
   props: {
     index: Number,
     data: Object,
+    numClicks: Number,
   },
   data() {
     return {
       active: true,
+      showing: false,
       isDragging: false,
       mouseIsDown: false,
+      topZIndex: 0,
     };
+  },
+  watch: {
+    numClicks: function(num) {
+      console.log("top z: ", this.topZIndex);
+      if (!this.showing) {
+        $("#" + this.index).css("z-index", this.topZIndex);
+      }
+      this.showing = num > this.index;
+    },
   },
   computed: {
     left: () => {
@@ -84,6 +96,11 @@ export default {
       $(".draggable")
         .draggable({
           containment: "#app",
+          stack: ".draggable",
+        })
+        .on("dragstop", (event) => {
+          console.log("drag stop: ", event.target.style.zIndex);
+          this.topZIndex = event.target.style.zIndex;
         })
         .mousedown(() => {
           this.isDragging = false;
@@ -103,13 +120,15 @@ export default {
           }
         });
     });
+
+    $(() => {
+      $(".draggable").draggable({
+        containment: "#app",
+        stack: ".draggable",
+      });
+    });
   },
   methods: {
-    moveToFront() {
-      // ("trying to move to front");
-      // (e.target);
-      // e.target.style.zIndex = e.target.style.zIndex++;
-    },
     closeWindow() {
       this.active = false;
     },

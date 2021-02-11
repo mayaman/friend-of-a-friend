@@ -46,7 +46,10 @@ export default {
   },
   mounted() {
     $(() => {
-      $(".draggable").draggable({ containment: "#app" });
+      $(".draggable").draggable({
+        containment: "#app",
+        stack: ".draggable",
+      });
     });
   },
   methods: {
@@ -69,11 +72,11 @@ export default {
   font-family: "VT323", monospace;
   font-size: 24px;
   line-height: 30px;
-  z-index: 999;
   width: auto;
   max-width: 35%;
   left: 32.5%;
   top: 30%;
+  z-index: 99999999999 !important;
 }
 
 .window-container:hover {

@@ -23,8 +23,8 @@
       v-bind:data="window"
       v-bind:key="index"
       v-bind:index="index"
+      v-bind:numClicks="numClicks"
       v-on:closeWindow="closeWindow"
-      v-on:nextCollection="openNextCollection"
       v-on:handleClick="handleClick"
     ></Popup>
     <Info v-show="showInfo" draggable="true" v-on:closeInfo="toggleInfo"></Info>
@@ -373,7 +373,7 @@ export default {
           left: 0,
           top: 0,
           size: 40,
-          yOffset: 200,
+          yOffset: 100,
         },
       ],
     };
@@ -398,7 +398,6 @@ export default {
     },
     handleClick(e) {
       this.numClicks++;
-      this.showContinue = false;
       if (this.numClicks < this.instructionsTextOptions.length) {
         this.instructionsText = this.instructionsTextOptions[this.numClicks];
       } else {
@@ -429,7 +428,9 @@ export default {
       }
       this.windowData[this.currentPopupIndex].top = topPos;
 
-      this.currentPopupIndex = this.currentPopupIndex + 1;
+      if (this.currentPopupIndex < this.windowData.length - 1) {
+        this.currentPopupIndex = this.currentPopupIndex + 1;
+      }
     },
     toggleInfo() {
       this.showInfo = !this.showInfo;
@@ -437,20 +438,6 @@ export default {
     closeWindow(index) {
       let idString = "collection" + this.currentWindowIndex + "window" + index;
       this.$refs[idString][0].closeWindow();
-    },
-    openNextCollection() {
-      this.currentWindowIndex++;
-      this.activateCollectionWindows();
-    },
-    activateCollectionWindows() {
-      for (
-        let w = 0;
-        w < this.windowCollections[this.currentWindowIndex].length;
-        w++
-      ) {
-        let idString = "collection" + this.currentWindowIndex + "window" + w;
-        this.$refs[idString][0].activate();
-      }
     },
   },
 };
