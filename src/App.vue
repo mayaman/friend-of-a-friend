@@ -394,7 +394,6 @@ export default {
       ) {
         this.isMobile = true;
       }
-      console.log("MOBILE??? ", this.isMobile);
     },
     handleClick(e) {
       this.numClicks++;

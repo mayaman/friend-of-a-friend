@@ -73,7 +73,6 @@ export default {
   },
   watch: {
     numClicks: function(num) {
-      console.log("top z: ", this.topZIndex);
       if (!this.showing) {
         $("#" + this.index).css("z-index", this.topZIndex);
       }
@@ -99,7 +98,6 @@ export default {
           stack: ".draggable",
         })
         .on("dragstop", (event) => {
-          console.log("drag stop: ", event.target.style.zIndex);
           this.topZIndex = event.target.style.zIndex;
         })
         .mousedown(() => {
