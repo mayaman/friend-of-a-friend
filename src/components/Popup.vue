@@ -41,8 +41,7 @@
         class="window-contents text"
         v-if="data.type == 'finale'"
       >
-        <br />
-        Thanks for popup window shopping with us : - )
+        Thanks for popup window shopping with us!
         <br />
         <br />
         Come inside @
@@ -51,24 +50,6 @@
         >
         for a closer look ♥
       </div>
-      <!-- <div class="window-contents continue" v-if="data.type == 'continue'">
-        <button v-on:click="$emit('nextCollection', index)">
-          <img
-            src="https://media.giphy.com/media/MTt7Eh8WPudlStuY7L/giphy.gif"
-            alt="Next button"
-          />
-        </button>
-      </div> -->
-      <!-- <div class="window-contents ytvideo" v-if="data.type == 'ytvideo'">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/HKLxvdFtlZE"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div> -->
     </div>
   </transition>
 </template>
@@ -161,12 +142,6 @@ export default {
   border-bottom: 2px solid #ffb1b9;
 }
 
-@media only screen and (max-width: 768px) {
-  .window-container {
-    max-width: 65% !important;
-  }
-}
-
 .draggable {
 }
 
@@ -215,14 +190,21 @@ export default {
   color: black;
   text-align: center;
   font-family: "VT323", monospace;
-  font-size: 24px;
+  font-size: 36px;
   display: block;
-  line-height: 30px;
-  padding: 15px;
+  line-height: 42px;
+  padding: 25px;
 }
 
-/* YOUTUBE EMBED */
-.ytvideo iframe {
-  max-width: 100%;
+@media only screen and (max-width: 768px) {
+  .window-container {
+    max-width: 65% !important;
+  }
+
+  .text,
+  .design {
+    font-size: 24px;
+    line-height: 30px;
+  }
 }
 </style>
