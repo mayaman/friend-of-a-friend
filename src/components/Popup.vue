@@ -44,7 +44,7 @@
         Thanks for popup window shopping with us!
         <br />
         <br />
-        Come inside @
+        Come visit
         <a target="_blank" href="https://www.friendofafriend.studio/shop"
           >friendofafriend.studio</a
         >
@@ -198,13 +198,15 @@ export default {
 
 @media only screen and (max-width: 768px) {
   .window-container {
-    max-width: 65% !important;
+    max-width: 75% !important;
+    width: auto;
   }
 
   .text,
   .design {
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 15px;
   }
 }
 </style>

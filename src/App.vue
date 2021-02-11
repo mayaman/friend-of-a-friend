@@ -403,6 +403,7 @@ export default {
       ) {
         this.isMobile = true;
       }
+      console.log("MOBILE??? ", this.isMobile);
     },
     handleClick(e) {
       this.numClicks++;
@@ -427,11 +428,13 @@ export default {
       // Select y position
       let yOffset = this.windowData[this.currentPopupIndex].yOffset;
       if (this.isMobile) {
-        yOffset = 25;
+        yOffset = yOffset / 2;
       }
       let topPos = e.y - yOffset;
-      if (topPos > window.innerHeight - 150) {
+      if (topPos > window.innerHeight - 150 && !this.isMobile) {
         topPos = topPos - 400;
+      } else if (this.isMobile && topPos > window.innerHeight - 100) {
+        topPos = topPos - 200;
       }
       this.windowData[this.currentPopupIndex].top = topPos;
 
@@ -592,7 +595,7 @@ body {
   padding: 0px 0 2px 0;
   width: max-content;
   will-change: transform;
-  animation: marquee 240s linear infinite;
+  animation: marquee 300s linear infinite;
 
   font-family: "VT323", monospace;
   font-size: 24px;
@@ -655,11 +658,11 @@ body {
 
 @-webkit-keyframes marquee {
   0% {
-    transform: translate(-5%, 0);
+    transform: translate(0%, 0);
   }
 
   100% {
-    transform: translate(-70%, 0);
+    transform: translate(-100%, 0);
   }
 }
 
