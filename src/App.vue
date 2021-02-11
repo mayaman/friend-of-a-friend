@@ -427,7 +427,7 @@ export default {
       // Select y position
       let yOffset = this.windowData[this.currentPopupIndex].yOffset;
       if (this.isMobile) {
-        yOffset = yOffset / 2;
+        yOffset = 25;
       }
       let topPos = e.y - yOffset;
       if (topPos > window.innerHeight - 150) {
