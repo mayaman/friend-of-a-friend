@@ -7,17 +7,15 @@
       </div>
 
       <div class="window-contents text">
-        <p>
-          This popup window shop celebrates the launch of Friend of a Friend's
-          new Internet inspired collection
-          <a href="https://www.friendofafriend.studio/shop" target="_blank"
-            ><span class="italics">Searching for connection</span></a
-          >.
-        </p>
-        <p>
-          It was designed and developed by friend of Friend of a Friend,
-          <a target="_blank" href="https://mayaontheinter.net/">Maya Man</a>.
-        </p>
+        This popup window shop celebrates the launch of Friend of a Friend's new
+        Internet inspired collection
+        <a href="https://www.friendofafriend.studio/shop" target="_blank"
+          ><span class="italics">Searching for connection</span></a
+        >.
+        <br />
+        <br />
+        It was designed and developed by friend of Friend of a Friend,
+        <a target="_blank" href="https://mayaontheinter.net/">Maya Man</a>.
       </div>
     </div>
   </transition>
@@ -69,8 +67,8 @@ export default {
   display: inline-grid;
   text-align: center;
   font-family: "VT323", monospace;
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 24px;
+  line-height: 30px;
   z-index: 999;
   width: auto;
   max-width: 35%;
@@ -104,6 +102,8 @@ export default {
   border-bottom: 2px solid black;
   position: relative;
   color: black;
+  font-size: 18px;
+  line-height: 20px;
 }
 
 .window-bar .x {

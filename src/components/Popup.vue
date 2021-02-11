@@ -190,10 +190,10 @@ export default {
   color: black;
   text-align: center;
   font-family: "VT323", monospace;
-  font-size: 36px;
+  font-size: 24px;
+  line-height: 30px;
   display: block;
-  line-height: 42px;
-  padding: 25px;
+  padding: 15px;
 }
 
 @media only screen and (max-width: 768px) {

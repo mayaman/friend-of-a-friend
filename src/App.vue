@@ -28,12 +28,6 @@
       v-on:handleClick="handleClick"
     ></Popup>
     <Info v-show="showInfo" draggable="true" v-on:closeInfo="toggleInfo"></Info>
-    <Continue
-      v-show="showContinue"
-      draggable="true"
-      v-on:closeWindow="closeWindow"
-      v-on:nextCollection="openNextCollection"
-    ></Continue>
     <div class="marquee">
       <a href="https://www.friendofafriend.studio/shop" target="_blank">
         <span class="marquee-text" id="on"
@@ -106,14 +100,12 @@
 </template>
 
 <script>
-import Continue from "./components/Continue.vue";
 import Popup from "./components/Popup.vue";
 import Info from "./components/Info.vue";
 
 export default {
   name: "App",
   components: {
-    Continue,
     Popup,
     Info,
   },
@@ -123,7 +115,6 @@ export default {
       isMobile: false,
       currentWindowIndex: 0,
       currentPopupIndex: 0,
-      showContinue: false,
       showInfo: false,
       instructionsText: "CLICK ANYWHERE TO EXPLORE...",
       instructionsTextOptions: [
