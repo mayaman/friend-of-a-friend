@@ -586,7 +586,7 @@ body {
   padding: 0px 0 2px 0;
   width: max-content;
   will-change: transform;
-  animation: marquee 300s linear infinite;
+  animation: marquee 500s linear infinite;
 
   font-family: "VT323", monospace;
   font-size: 24px;
