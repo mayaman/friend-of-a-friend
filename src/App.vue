@@ -388,7 +388,17 @@ export default {
       );
     },
   },
-  mounted() {},
+  mounted() {
+    console.log(
+      "%cmade by Maya Man 🌐",
+      "font-size: 12px;color: white; text-shadow: 2px 2px 0 #ed1288"
+    );
+
+    console.log(
+      "%c☆:*💞🌸!!💘🆒:-)👾🌼💖⛅️🌞<3🍇💌 ✿📓💓💟💭",
+      "font-size: 12px;color: white; text-shadow: 2px 2px 0 #ed1288"
+    );
+  },
   methods: {
     handleClick(e) {
       this.numClicks++;
@@ -444,10 +454,6 @@ export default {
 </script>
 
 <style>
-.italics {
-  font-style: italic;
-}
-
 body {
   background: black;
   cursor: url("~@/assets/mouse.png"), auto;
@@ -539,7 +545,6 @@ body {
 }
 
 /* TRANSITION */
-
 .bounce-enter-active {
   animation: bounce-in 0.3s;
 }
@@ -555,8 +560,7 @@ body {
   }
 }
 
-/* MARQUEE SHIT */
-
+/* MARQUEE */
 .marquee {
   width: 100%;
   display: inline-flex;
@@ -573,7 +577,7 @@ body {
   padding: 0px 0 2px 0;
   width: max-content;
   will-change: transform;
-  animation: marquee 500s linear infinite;
+  animation: marquee 600s linear infinite;
 
   font-family: "VT323", monospace;
   font-size: 24px;
@@ -582,30 +586,6 @@ body {
   background: #f2817f;
   cursor: url("~@/assets/pointer.png"), pointer;
   z-index: 99;
-}
-
-@media only screen and (max-width: 768px) {
-  #connection-logo {
-    height: 40vh;
-    margin: 25vh auto;
-  }
-
-  .info {
-    font-size: 18px;
-  }
-
-  .instructions {
-    font-size: 18px;
-  }
-
-  .foaf-logo {
-    max-width: 50%;
-  }
-
-  .marquee-text {
-    font-size: 18px;
-    animation: marquee 1000s linear infinite;
-  }
 }
 
 .marquee-text:hover {
@@ -645,6 +625,83 @@ body {
   }
 }
 
+/* MOBILE */
+@media only screen and (max-width: 768px) {
+  #connection-logo {
+    height: 40vh;
+    margin: 25vh auto;
+  }
+
+  .info {
+    font-size: 18px;
+  }
+
+  .instructions {
+    font-size: 18px;
+  }
+
+  .foaf-logo {
+    max-width: 50%;
+  }
+
+  .marquee-text {
+    font-size: 18px;
+    animation: marquee 1000s linear infinite;
+  }
+}
+
+/* GLOBAL */
+.window-container {
+  background: #f5f5f5;
+  position: absolute;
+  border: 2px solid black;
+  display: inline-grid;
+}
+
+.window-container:hover {
+  border: 2px solid #ffb1b9;
+}
+
+.window-container:hover > .window-bar {
+  border-bottom: 2px solid #ffb1b9;
+}
+
+.window-bar {
+  height: 20px;
+  background: #ffb1b9;
+  border-bottom: 2px solid black;
+  position: relative;
+}
+
+.window-bar .x {
+  height: 10px;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  padding: 5px;
+  transform: translate(-50%, -50%);
+}
+
+.window-bar .x:hover {
+  height: 15px;
+  cursor: url("~@/assets/pointer.png"), auto;
+}
+
+.window-contents {
+  display: inline-flex;
+}
+
+.text,
+.design {
+  color: black;
+  text-align: center;
+  font-family: "VT323", monospace;
+  font-size: 24px;
+  line-height: 30px;
+  display: block;
+  padding: 15px;
+}
+
 .text a {
   color: #f2817f;
   text-decoration: none;
@@ -652,6 +709,15 @@ body {
 
 .text a:hover {
   cursor: url("~@/assets/pointer.png"), pointer;
-  color: #4a8fcc;
+  /* color: #4a8fcc; */
+  color: #40edb9;
+}
+
+.italics {
+  font-style: italic;
+}
+
+.draggable:hover {
+  cursor: url("~@/assets/mouse.png"), auto;
 }
 </style>

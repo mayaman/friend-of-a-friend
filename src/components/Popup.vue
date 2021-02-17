@@ -89,9 +89,6 @@ export default {
       this.size = this.data.size;
     }
 
-    console.log("MOBILE: ", this.isMobile);
-    console.log("SIZE", this.size);
-
     $(() => {
       $(".draggable")
         .draggable({
@@ -120,12 +117,12 @@ export default {
         });
     });
 
-    $(() => {
-      $(".draggable").draggable({
-        containment: "#app",
-        stack: ".draggable",
-      });
-    });
+    // $(() => {
+    //   $(".draggable").draggable({
+    //     containment: "#app",
+    //     stack: ".draggable",
+    //   });
+    // });
   },
   methods: {
     closeWindow() {
@@ -136,63 +133,11 @@ export default {
         this.$emit("handleClick", e);
       }
     },
-    getOpenDelay() {
-      return this.openDelay;
-    },
   },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.window-container {
-  /* background: #f5f5f5; */
-  position: absolute;
-  border: 2px solid black;
-  display: inline-grid;
-}
-
-.window-container:hover {
-  border: 2px solid #ffb1b9;
-}
-
-.window-container:hover > .window-bar {
-  border-bottom: 2px solid #ffb1b9;
-}
-
-.draggable {
-}
-
-.draggable:hover {
-  cursor: url("~@/assets/mouse.png"), auto;
-}
-
-.window-bar {
-  height: 20px;
-  background: #ffb1b9;
-  border-bottom: 2px solid black;
-  position: relative;
-}
-
-.window-bar .x {
-  height: 10px;
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  padding: 5px;
-  transform: translate(-50%, -50%);
-}
-
-.window-bar .x:hover {
-  height: 15px;
-  cursor: url("~@/assets/pointer.png"), auto;
-}
-
-.window-contents {
-  /* padding: 15px; */
-  display: inline-flex;
-}
-
 .window-contents img {
   max-width: 100%;
   height: auto;
@@ -201,17 +146,6 @@ export default {
 
 .image {
   display: contents;
-}
-
-.text,
-.design {
-  color: black;
-  text-align: center;
-  font-family: "VT323", monospace;
-  font-size: 24px;
-  line-height: 30px;
-  display: block;
-  padding: 15px;
 }
 
 @media only screen and (max-width: 768px) {

@@ -64,11 +64,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .window-container {
-  background: #f5f5f5;
-  position: absolute;
-  border: 2px solid black;
-  display: inline-grid;
-  text-align: center;
   font-family: "VT323", monospace;
   font-size: 24px;
   line-height: 30px;
@@ -79,12 +74,10 @@ export default {
   z-index: 99999999999 !important;
 }
 
-.window-container:hover {
-  border: 2px solid #ffb1b9;
-}
-
-.window-container:hover > .window-bar {
-  border-bottom: 2px solid #ffb1b9;
+.window-bar {
+  color: black;
+  font-size: 18px;
+  line-height: 20px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -93,49 +86,5 @@ export default {
     left: 5%;
     top: 30%;
   }
-}
-
-.draggable:hover {
-  cursor: url("~@/assets/mouse.png"), auto;
-}
-
-.window-bar {
-  height: 20px;
-  background: #ffb1b9;
-  border-bottom: 2px solid black;
-  position: relative;
-  color: black;
-  font-size: 18px;
-  line-height: 20px;
-}
-
-.window-bar .x {
-  height: 10px;
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  padding: 5px;
-  transform: translate(-50%, -50%);
-}
-
-.window-bar .x:hover {
-  height: 15px;
-  cursor: url("~@/assets/pointer.png"), auto;
-}
-
-.window-contents {
-  /* padding: 15px; */
-  display: inline-flex;
-}
-
-.text,
-.design {
-  color: black;
-  text-align: center;
-  font-family: "VT323", monospace;
-  font-size: 24px;
-  display: inline;
-  line-height: 30px;
-  padding: 15px;
 }
 </style>
