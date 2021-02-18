@@ -9,8 +9,10 @@
       <div class="window-contents text">
         This popup window shop celebrates Friend of a Friend Studio's Internet
         inspired collection
-        <a href="https://www.friendofafriend.studio/shop" target="_blank"
-          ><span class="italics">Searching for connection</span></a
+        <a
+          href="https://www.friendofafriend.studio/shop?category=*+Featured"
+          target="_blank"
+          ><span class="italics">Searching for Connection</span></a
         >.
         <br />
         <br />

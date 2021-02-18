@@ -29,7 +29,10 @@
     ></Popup>
     <Info v-show="showInfo" draggable="true" v-on:closeInfo="toggleInfo"></Info>
     <div class="marquee">
-      <a href="https://www.friendofafriend.studio/shop" target="_blank">
+      <a
+        href="https://www.friendofafriend.studio/shop?category=*+Featured"
+        target="_blank"
+      >
         <span class="marquee-text" id="on"
           >CLICK HERE TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP THE COLLECTION
           ➩ CLICK HERE TO SHOP THE COLLECTION ➩ CLICK HERE TO SHOP THE
